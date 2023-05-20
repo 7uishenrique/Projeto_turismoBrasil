@@ -1,0 +1,281 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+
+:root{
+    --font: 'Nunito', sans-serif;
+
+    font-size: 62.5%;
+    --fs-heading: clamp(1rem, 1rem + 9vw, 5rem);
+    --fs-heading-sm: clamp(1rem, 0.5rem + 3vw, 2rem);
+}
+
+body{
+    font-family: var(--font);
+}
+
+.page{
+    max-width: 60rem;
+    margin: 0 auto;
+}
+
+main{
+    max-width: 60rem;
+    background-image: url(../img/capaRio_Mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.content_principal{
+    max-width: 50rem;
+    padding-top: 10rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin: 0 auto;
+}
+
+.content_principal h1{
+    font-size: var(--fs-heading);
+    font-weight: bold;
+    color: #fff;
+}
+
+.content_principal p{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.content_principal a, .info_lugares a{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: #111;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #FFD34C;
+}
+
+.content_principal a:hover, .info_lugares a:hover{
+    background-color: #00D34C;
+}
+
+main h3{
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 15rem;
+    padding-bottom: 5rem;
+} 
+
+.card{
+    margin-bottom: -4px;
+    border-radius: 8px;
+}
+
+.card p, .comentarios p{
+    margin: 3rem;
+    font-size: var(--fs-heading-sm);
+}
+
+.card h3, .comentarios h3{
+    margin: 3rem;
+    font-size: 3rem;
+    text-align: center;
+}
+
+.card figure{
+    position: relative;
+}
+
+.card figure img{
+    border-radius: 8px;
+}
+
+.card figcaption{
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.placeWhats{
+    margin-top: -4rem;
+    height: 40rem;
+    background-color: #FFD34C;
+}
+
+.placeWhats h3{
+    padding-top: 3rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+.placeWhats form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 3rem;
+}
+
+.placeWhats form input{
+    padding-left: 1rem;
+    border-radius: 0.5rem;
+    border: none;
+    height: 4rem;
+}
+ .placeWhats form input::placeholder{
+    font-style: italic;
+ }
+
+ .placeWhats form input:last-child{
+    background-color: #00D34C;
+    font-weight: bold;    
+ }
+
+ .placeWhats form input:last-child:hover{
+    background-color: #ebc245;
+ }
+
+ .info_lugares{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    font-size: var(--fs-heading-sm);
+ }
+
+ .info_lugares a{
+    margin-top: 4rem;
+ }
+
+ .box_comentario{
+    width: 100vw;
+    height: 32rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 0 1rem;
+ } 
+
+ .box_comentario img{
+    width: 100%;
+    position: relative;
+ }
+
+ .box_comentario figcaption{
+    font-size: var(--fs-heading-sm);
+    position: absolute;
+    margin-top: 7.5rem;
+    padding: 0 3rem;
+    
+ }
+
+ footer{
+    background-image: url(../img/bgd_footer.png);
+    height: 123rem;
+    margin-top: -35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+ }
+
+ footer .logo{
+    margin-top: 70rem;
+ }
+
+ footer p{
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 8rem;
+ }
+
+ footer .skills{
+    margin-top: 10rem;
+ }
+
+ @media (min-width: 700px){
+    .page{
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+    main{
+        min-width: 100%;
+        background-image: url(../img/capaRIOheri.png);
+    }
+
+    .pontosTuristico{
+        display: grid;
+        grid-template-areas: "box1 box2"
+                             "box3 box3"
+                             "box4 box4" ;
+        gap: 2rem;
+    }
+
+    .pontosTuristico .matogrossodosul{
+        grid-area: box1;
+    } 
+    .pontosTuristico .riodejaneiro{
+        grid-area: box2;
+    }   
+    .pontosTuristico .placeWhats{
+        grid-area: box3;
+        margin-top: 0.5rem;
+    }
+    .pontosTuristico .roraima{
+        grid-area: box4;
+    }
+    
+    .depoimentos{
+        max-width: 100%;
+        display: flex;
+    }
+
+    .depoimentos .box_comentario{
+        width: 33%;
+    }
+    .depoimentos p{
+        font-size: 1.5rem;
+    }
+    .depoimentos .box_comentario figcaption{
+        margin-top: 6.5rem;
+    }
+    footer{
+        background-image: url("../img/bgd_footerLarge.png");
+    }
+
+    @media (min-width: 1024px) {
+        .page{
+            max-width: 192rem;
+            margin: 0 auto;
+        }
+        main{
+            background-image: url(../img/capaRIOheri.png);
+        }
+        .lugares, .info_lugares, .comentarios{
+            max-width: 102rem;
+            margin: 0 auto;
+        }
+        .content_principal{
+            margin-left: 45rem;
+        }
+
+    }
+ }
+
